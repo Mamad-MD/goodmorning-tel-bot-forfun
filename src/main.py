@@ -44,7 +44,6 @@ async def main():
 
 
     scheduler.add_job(send_good_morning, 'cron', hour=5, minute=0)
-
     scheduler.add_job(send_good_night, 'cron', hour=22, minute=0)
     
     scheduler.start()

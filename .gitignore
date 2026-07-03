@@ -6,6 +6,7 @@ __pycache__/
 *.py[cod]
 *.pyo
 *.pyc
+special_morning/__pycache__/
 
 .vscode/
 .idea/
