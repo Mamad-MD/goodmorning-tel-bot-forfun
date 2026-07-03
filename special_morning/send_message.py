@@ -14,7 +14,7 @@ async def main():
     try:
         bot = Bot(token=BOT_TOKEN)
         message = "سلام عزیزم صبحت بخیر ♥️☀️"
-        await bot.send_message(chat_id=CHAT_ID, text=message)
+        await bot.send_message(chat_id=M_CHAT_ID, text=message)
     except Exception as e:
         print(f"❌ Error sending morning message: {e}")
 
