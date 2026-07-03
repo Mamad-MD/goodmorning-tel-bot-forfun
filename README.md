@@ -1,68 +1,35 @@
-# Good Morning Telegram Bot (Python)
+# ☀️ Good Morning Telegram Bot
 
-A small, **for-fun learning project** to get familiar with:
-- Telegram bot basics (Bot API)
-- Python project structure
-- Using environment variables (`.env`)
-- Scheduling a daily message (optional)
+[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This bot sends a simple “Good Morning” message to a specific chat.
+یک پروژه آموزشی و تفننی برای آشنایی با اکوسیستم بات‌های تلگرام و مدیریت پروژه‌های پایتونی. این بات به صورت خودکار هر روز صبح ساعت **۰۵:۰۰** یک پیام انرژی‌بخش ارسال می‌کند.
 
 ---
 
-## Tech Stack
-- Python 3.10+
-- [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot)
-- python-dotenv
+## 🎯 اهداف پروژه (Learning Goals)
+این پروژه با هدف یادگیری مفاهیم زیر پیاده‌سازی شده است:
+- **Telegram Bot API:** کار با کتابخانه محبوب `python-telegram-bot`.
+- **Environment Variables:** مدیریت داده‌های حساس (Token) با استفاده از `.env`.
+- **Task Scheduling:** زمان‌بندی اجرای کدها با `APScheduler`.
+- **Project Structuring:** رعایت ساختار استاندارد فایل‌بندی در پایتون.
 
 ---
 
-## Project Structure
+## 🛠 ابزارها و تکنولوژی‌ها
+- **Language:** Python 3.10+
+- **Library:** `python-telegram-bot` (V20+)
+- **Scheduler:** `APScheduler`
+- **Config:** `python-dotenv`
+
+---
+
+## 🏗 ساختار پروژه
+```text
 .
-├─ src/
-│ └─ main.py
-├─ .env.example
-├─ .gitignore
-├─ requirements.txt
-└─ README.md
-
----
-
-## Setup
-
-### 
-1) Create a virtual environment
-Windows (PowerShell):
-```powershell
-python -m venv .venv
-.venv\Scripts\activate
-
-macOS/Linux:
-python3 -m venv .venv
-source .venv/bin/activate
-
-2) Install dependencies
-
-pip install -r requirements.txt
-
-3) Configure environment variables
-
-Create a .env file (do NOT commit it). Use .env.example as a template:
-BOT_TOKEN=...
-CHAT_ID=...
-
-Getting CHAT_ID
-Send a message to your bot in Telegram.
-Open:
-   https://api.telegram.org/bot<BOT_TOKEN>/getUpdates
-   
-Find:
-   "chat": { "id": 123456789 }
-   
-Run
-python src/main.py
-Notes
-This repository is intentionally minimal and educational.
-Do not commit your real bot token or .env file.
-
----
+├── src/
+│   └── main.py          # کد اصلی بات و زمان‌بندی
+├── .env.example         # نمونه متغیرهای محیطی
+├── .gitignore           # فایل‌های نادیده گرفته شده توسط گیت
+├── requirements.txt     # لیست پکیج‌های مورد نیاز
+└── README.md            # راهنمای پروژه
