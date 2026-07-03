@@ -8,7 +8,7 @@ async def main():
     BOT_TOKEN = os.getenv("BOT_TOKEN")
     M_CHAT_ID = os.getenv("M_CHAT_ID")
 
-    if not BOT_TOKEN or not CHAT_ID:
+    if not BOT_TOKEN or not M_CHAT_ID:
         raise ValueError("BOT_TOKEN or M_CHAT_ID is not found")
         return
     try:
