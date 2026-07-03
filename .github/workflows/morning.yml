@@ -2,7 +2,7 @@ name: Send Morning Message
 
 on:
   schedule:
-    - cron: "30 2 * * *"   # 7 صبح تهران = 2:30 UTC
+    - cron: "30 3 * * *"   # 7 صبح تهران = 2:30 UTC
   workflow_dispatch:        # اجرا دستی هم داشته باشیم
 
 jobs:
