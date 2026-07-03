@@ -29,4 +29,4 @@ jobs:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
         run: |
-          python main.py # نام اسکریپتی که پیام را می‌فرستد
+          python src/main.py # نام اسکریپتی که پیام را می‌فرستد
