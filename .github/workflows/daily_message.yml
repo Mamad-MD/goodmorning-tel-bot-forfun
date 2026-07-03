@@ -1,0 +1,32 @@
+name: Send Daily Telegram Message
+
+on:
+  schedule:
+    # ساعت ۷ صبح به وقت ایران (۳:۳۰ UTC)
+    - cron: '30 1 * * *'
+    # ساعت ۱۲ شب به وقت ایران (۲۰:۳۰ UTC)
+    - cron: '30 19 * * *'
+  workflow_dispatch: # برای تست دستی
+
+jobs:
+  send_message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+            pip install python-telegram-bot pytz python-dotenv
+
+      - name: Send Message
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+        run: |
+          python main.py # نام اسکریپتی که پیام را می‌فرستد
